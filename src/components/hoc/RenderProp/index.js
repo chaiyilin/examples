@@ -1,0 +1,1 @@
+export { RenderProp } from './Component'
