@@ -46,7 +46,12 @@ class App extends React.Component {
         </section>
         <span className="hesmaili">
           GitHub Card With ReactJs - Created By{' '}
-          <a href="https://twitter.com/hesmaili95" target="_blank" title="Hamed Esmaili">
+          <a
+            href="https://twitter.com/hesmaili95"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Hamed Esmaili"
+          >
             Hamed Esmaili
           </a>
         </span>
@@ -60,7 +65,11 @@ class SearchProfile extends React.Component {
       <div className="search--box">
         <form onSubmit={this.handleForm.bind(this)}>
           <label>
-            <input type="search" ref="username" placeholder="Type Username + Enter" />
+            <input
+              type="search"
+              ref="username"
+              placeholder="Type Username + Enter"
+            />
           </label>
         </form>
       </div>
@@ -85,14 +94,20 @@ class Profile extends React.Component {
       return (
         <div className="notfound">
           <h2>Oops !!!</h2>
-          <p>The Component Couldn't Find The You Were Looking For . Try Again </p>
+          <p>
+            The Component Couldn't Find The You Were Looking For . Try Again{' '}
+          </p>
         </div>
       );
     else
       return (
         <section className="github--profile">
           <div className="github--profile__info">
-            <a href={data.homeUrl} target="_blank" title={data.name || data.username}>
+            <a
+              href={data.homeUrl}
+              target="_blank"
+              title={data.name || data.username}
+            >
               <img src={data.avatar} alt={data.username} />
             </a>
             <h2>
@@ -111,7 +126,11 @@ class Profile extends React.Component {
                 </a>
               </li>
               <li>
-                <a href={repositories} target="_blank" title="Number Of Repositoriy">
+                <a
+                  href={repositories}
+                  target="_blank"
+                  title="Number Of Repositoriy"
+                >
                   <i>{data.repos}</i>
                   <span>Repositoriy</span>
                 </a>
