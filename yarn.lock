@@ -36,6 +36,10 @@
     global "^4.3.2"
     prop-types "^15.5.10"
 
+"@storybook/addon-options@^3.3.14":
+  version "3.3.14"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.3.14.tgz#578b59de3ca93b788662b3d863781611f7fc2e87"
+
 "@storybook/addons@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.3.14.tgz#20a65085b834898ea6154b9061ebc65a74c6cb33"
@@ -5203,6 +5207,16 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mobx-react@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.4.2.tgz#22d710974883de1763cdafce3025570a79c64336"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+mobx@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.6.1.tgz#ae63a8f00e1485a740d0f91ae2f6a5f68e303bea"
 
 move-concurrently@^1.0.1:
   version "1.0.1"

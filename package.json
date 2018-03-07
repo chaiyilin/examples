@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mobx": "^3.6.1",
+    "mobx-react": "^4.4.2",
     "react": "^16.3.0-alpha.1",
     "react-dom": "^16.3.0-alpha.1",
     "react-redux": "^5.0.7",
@@ -11,6 +13,7 @@
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
+    "@storybook/addon-options": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "autoprefixer": "7.1.6",
     "babel-cli": "^6.26.0",
@@ -58,7 +61,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "storybook": "start-storybook -p 9001 -c ./src/storybook"
+    "sb": "start-storybook -p 9001 -c ./src/storybook"
   },
   "jest": {
     "collectCoverageFrom": [
