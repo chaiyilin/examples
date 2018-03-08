@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose, withHandlers, withState } from 'recompose';
+import { compose, withHandlers, withState, lifecycle } from 'recompose';
 import { camelCase as camel } from 'lodash';
 import { default as decamel } from 'decamelize';
 
@@ -37,13 +37,20 @@ export const CompoRadio = ({
   convertType,
   onSourceChange,
   onConvertTypeChange,
-  onSubmit
+  onSubmit,
+  onRef,
+  focus
 }) => {
   return (
     <form onSubmit={onSubmit}>
       <div>
         <div>
-          <input type="text" value={source} onChange={onSourceChange} />
+          <input
+            type="text"
+            ref={onRef}
+            value={source}
+            onChange={onSourceChange}
+          />
         </div>
         <div>
           <label>
@@ -100,6 +107,14 @@ const enhance = compose(
   withState('source', 'setSource', ''),
   withState('target', 'setTarget', ''),
   withState('convertType', 'setConvertType', CAMEL),
+  withHandlers(() => {
+    let sourceInput = null;
+
+    return {
+      onRef: () => ref => (sourceInput = ref),
+      focus: () => () => sourceInput.focus()
+    };
+  }),
   withHandlers({
     onSourceChange: ({ setSource, setTarget, convertType }) => e => {
       const source = e.target.value.toLowerCase();
@@ -114,6 +129,11 @@ const enhance = compose(
     onSubmit: props => e => {
       e.preventDefault();
       console.log(props);
+    }
+  }),
+  lifecycle({
+    componentDidMount() {
+      this.props.focus();
     }
   })
 );
