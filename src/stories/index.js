@@ -8,4 +8,4 @@ export {
 export {
   stories as styled_components_advanced_theming
 } from './styled-components-advanced-theming';
-export { story1, Story2, Story3 } from './styled-components-advanced';
+export { Story1, Story2, Story3 } from './styled-components-advanced';

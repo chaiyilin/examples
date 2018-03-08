@@ -10,10 +10,10 @@ import { AttachingAdditionalProps } from '../components/styled-components/01-bas
 import { Animations } from '../components/styled-components/01-basics/07-Animations';
 
 export const stories = storiesOf('styled components/01-basics', module)
-  .add('Getting Started', () => <GettingStarted />)
-  .add('Passed Props', () => <PassedProps />)
-  .add('Adapting Based On Props', () => <AdaptingBasedOnProps />)
-  .add('Styling Any Components', () => <StylingAnyComponents />)
-  .add('Extending Styles', () => <ExtendingStyles />)
-  .add('Attaching Additional Props', () => <AttachingAdditionalProps />)
-  .add('Animations', () => <Animations />);
+  .add('01-Getting Started', () => <GettingStarted />)
+  .add('02-Passed Props', () => <PassedProps />)
+  .add('03-Adapting Based On Props', () => <AdaptingBasedOnProps />)
+  .add('04-Styling Any Components', () => <StylingAnyComponents />)
+  .add('05-Extending Styles', () => <ExtendingStyles />)
+  .add('05-Attaching Additional Props', () => <AttachingAdditionalProps />)
+  .add('06-Animations', () => <Animations />);
