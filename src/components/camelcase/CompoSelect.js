@@ -6,14 +6,14 @@ const SPACE = 'space';
 const CAMEL = 'camel';
 const UNDERSCORE = 'underscore';
 
-export class CompoRadio extends React.Component {
+export class CompoSelect extends React.Component {
   state = {
     source: '',
     target: '',
     convertType: CAMEL
   };
 
-  handleSourceChange = e => {
+  onSourceChange = e => {
     const source = e.target.value.toLowerCase();
     this.setState({
       source: source,
@@ -21,7 +21,7 @@ export class CompoRadio extends React.Component {
     });
   };
 
-  handleConvertTypeChange = e => {
+  onConvertTypeChange = e => {
     const convertType = e.target.value;
     this.setState({
       convertType: convertType,
@@ -56,44 +56,23 @@ export class CompoRadio extends React.Component {
           <input
             type="text"
             value={this.state.source}
-            onChange={this.handleSourceChange}
+            onChange={this.onSourceChange}
           />
         </div>
         <div>
-          <label>
-            <input
-              type="radio"
-              name="convertType"
-              value={CAMEL}
-              checked={this.state.convertType === CAMEL}
-              onChange={this.handleConvertTypeChange}
-            />camel
-          </label>
-
-          <label>
-            <input
-              type="radio"
-              name="convertType"
-              value={SPACE}
-              checked={this.state.convertType === SPACE}
-              onChange={this.handleConvertTypeChange}
-            />space
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="convertType"
-              value={UNDERSCORE}
-              checked={this.state.convertType === UNDERSCORE}
-              onChange={this.handleConvertTypeChange}
-            />underscore
-          </label>
+          <select
+            value={this.state.convertType}
+            onChange={this.onConvertTypeChange}
+          >
+            <option value="camel">camel</option>
+            <option value="space">space</option>
+            <option value="underscore">underscore</option>
+          </select>
         </div>
 
         <div>
           <input type="text" disabled value={this.state.target} />
         </div>
-        {/* <input type="file" id="input" multiple /> */}
       </div>
     );
   }
