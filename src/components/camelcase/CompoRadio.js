@@ -6,6 +6,7 @@ import { default as decamel } from 'decamelize';
 const SPACE = 'space';
 const CAMEL = 'camel';
 const UNDERSCORE = 'underscore';
+const DASH = 'DASH';
 
 const convert = (source, convertType) => {
   let target;
@@ -19,6 +20,9 @@ const convert = (source, convertType) => {
         break;
       case UNDERSCORE:
         target = decamel(camel(source), '_');
+        break;
+      case DASH:
+        target = decamel(camel(source), '-');
         break;
       default:
         break;
@@ -69,6 +73,16 @@ export const CompoRadio = ({
               checked={convertType === UNDERSCORE}
               onChange={onConvertTypeChange}
             />underscore
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="convertType"
+              value={DASH}
+              checked={convertType === DASH}
+              onChange={onConvertTypeChange}
+            />dash
           </label>
         </div>
 
