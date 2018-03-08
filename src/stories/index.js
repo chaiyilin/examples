@@ -9,3 +9,4 @@ export {
   stories as styled_components_advanced_theming
 } from './styled-components-advanced-theming';
 export { Story1, Story2, Story3 } from './styled-components-advanced';
+export { stories as tipsAndTricks } from './styled-components-tips-and-tricks';
