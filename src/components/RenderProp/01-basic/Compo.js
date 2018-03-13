@@ -12,6 +12,6 @@ class Caffeinate extends Component {
   }
 }
 
-export const RenderProp = () => (
+export const Compo = () => (
   <Caffeinate>{beverage => <div>Drinking an {beverage}.</div>}</Caffeinate>
 );

@@ -9,6 +9,7 @@
     "mobx-react": "^4.4.2",
     "react": "^16.3.0-alpha.1",
     "react-dom": "^16.3.0-alpha.1",
+    "react-powerplug": "^0.1.5",
     "react-redux": "^5.0.7",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
