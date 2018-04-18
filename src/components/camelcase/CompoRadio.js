@@ -3,6 +3,8 @@ import { compose, withHandlers, withState, lifecycle } from 'recompose';
 import { camelCase as camel } from 'lodash';
 import { default as decamel } from 'decamelize';
 
+console.log('object');
+
 const SPACE = 'space';
 const CAMEL = 'camel';
 const UNDERSCORE = 'underscore';
